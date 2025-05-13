@@ -1,0 +1,184 @@
+body {
+  align-items: center;
+}
+.robot-container {
+  height: 1000px;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 140px;
+  background-color: #21222c;
+  background-size: cover;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.robot-face-shape {
+  height: 600px;
+  width: 600px;
+  border: 20px solid aqua;
+  border-radius: 10%;
+  background: linear-gradient(45deg, #4158D0, #C850C0, #FFCC70);
+}
+
+.robot-eye-left {
+  height: 100px;
+  width: 100px;
+  background-color: palegoldenrod;
+  position: relative;
+  top: 150px;
+  left: 120px;
+  border-radius: 30px 30px 30px 30px;
+  animation: animate-eye-left 2s linear infinite;
+}
+@keyframes animate-eye-left {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.robot-eye-right {
+  height: 1.875rem;
+  width: 6.25rem;
+  background-color: hsl(300, 76%, 50%);
+  position: relative;
+  top: 6.25rem;
+  left: 320px;
+  animation: animate-eye-right 2s ease-in-out infinite;
+}
+@keyframes animate-eye-right {
+  0% { translate: 0rem; }
+  25% {translate: 4rem}
+  25% {background-color: #4158D0;}
+  50% {translate: 4rem -4rem;}
+  50% {background-color: #00ccff;}
+  75% {translate: 0rem -4rem;}
+  75% {background-color: #4b0082;}
+  100% {translate: 0rem;}
+}
+
+.robot-ear-left {
+  height: 16%;
+  width: 10%;
+  background-color: yellowgreen;
+  position: relative;
+  bottom: 350px;
+  right: 380px;
+  border-radius: 100%;
+  animation: animate-ear-left 2s ease-in-out infinite;
+}
+@keyframes animate-ear-left {
+  0% { translate: 0rem; }
+  100% {translate: 0rem;}
+  50% {translate: 0rem -8rem;}
+}
+
+.robot-ear-right {
+  height: 120px;
+  width: 120px;
+  background-color: violet;
+  position: relative;
+  bottom: 480px;
+  left: 370px;
+  border-radius: 100%;
+  animation: animate-ear-right 2s ease-in-out infinite;
+}
+@keyframes animate-ear-right {
+  0% { transform: scale(0.1); }
+  50% {transform:scale(1.1) ;}
+  100% {background-color: transparent;}
+  100% {transform:scale(0.1);}
+}
+
+.robot-nose {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent; 
+  border-top: 50px solid orange;
+  margin: 2rem;
+  position: relative;
+  top: 180px;
+  left: 170px;
+}
+
+.robot-nose:hover{
+  transform: translate(100rem);
+  transition: all 3s ease-in-out;
+}
+
+.robot-teeth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  height: 100px;
+  width: 320px;
+  position: relative;
+  top: 140px;
+  left: 120px;
+  gap: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.robot-tooth {
+  height: 45px;
+  width: 40px;
+  background-color: white;
+  animation: animate-tooth 0.1s ease-in-out infinite;
+}
+@keyframes animate-tooth {
+  0% { transform:rotate(5deg); }
+  100% {transform:rotate(-5deg);}
+}
+
+.robot-hair-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 320px;
+  height: 80px;
+  position: fixed;
+  top: 50px;
+}
+
+.robot-hair-one {
+  align-self: flex-end;
+  height: 30px;
+  width: 45px;
+  background-color: green;
+  animation: animate-hair-one 1.7s ease-in-out infinite;
+}
+@keyframes animate-hair-one {
+  0% { transform: scale(1, 1); }
+  50% { transform: scale(1, 2.8); }
+  100% { transform: scale(1, 1); }
+}
+
+.robot-hair-two {
+  align-self: flex-end;
+  height: 45px;
+  width: 45px;
+  background-color: gold;
+  animation: animate-hair-two 1.7s ease-in-out infinite;
+}
+@keyframes animate-hair-two {
+  0% { transform: scale(1, 1); }
+  50% { transform: scale(1, 2.3); }
+  100% { transform: scale(1, 1); }
+}
+
+.robot-hair-three {
+  align-self: flex-end;
+  height: 60px;
+  width: 45px;
+  background-color: hotpink;
+  animation: animate-hair-three 1.7s ease-in-out infinite;
+}
+@keyframes animate-hair-three {
+  0% { transform: scale(1, 1); }
+  50% { transform: scale(1, 2); }
+  100% { transform: scale(1, 1); }
+}
